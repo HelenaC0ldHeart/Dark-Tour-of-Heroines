@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Application-wide Styles */
+
+/* Header stuff*/
+
+.skullWoman {
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1 {
+    color: #470012;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+    text-align: center;
+    animation: Glowing 1s ease-in-out infinite alternate;
+  }
+
+@keyframes Glowing {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #B809CA, 0 0 20px #B809CA, 0 0 25px #B809CA, 0 0 30px #B809CA, 0 0 35px #B809CA;
+  }
+  to {
+     text-shadow: 0 0 12px #B809CA, 0 0 32px blue;
+  }
+}
+
+
+  h2, h3 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    animation: Glowing2 1s ease-in-out infinite alternate;
+  }
+
+@keyframes Glowing2 {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 15px white, 0 0 20px gold, 0 0 25px orangered, 0 0 30px darkred;
+  }
+  to {text-shadow: 0 0 12px white, 0 0 20px orange};
+}
+
+
+  body {
+    margin: 2em;
+    background-color: black;
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia;
+  }
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+
+  /* FOOTER */
+
+  .devil-girl {
+    position: relative;
+    height: 300px;
+    width: auto;
+  }
+
+  .poison-love {
+    position: absolute;
+    height: 300px;
+    width: auto;
+    margin-left: 800px;
+  }
