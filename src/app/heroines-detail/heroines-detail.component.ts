@@ -1,7 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Heroines } from '../heroines';
-import { HeroinesComponent } from '../heroines/heroines.component';
-import { HEROINES } from '../mock-heroines';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { HeroinesService } from '../heroines.service';
+
+
 
 @Component({
   selector: 'app-heroines-detail',
@@ -9,13 +12,35 @@ import { HEROINES } from '../mock-heroines';
   styleUrls: ['./heroines-detail.component.css']
 })
 export class HeroinesDetailComponent implements OnInit {
+hero: Heroines[];
+  heroines: Heroines;
+
+  constructor(
+    private route: ActivatedRoute,
+    private heroinesService: HeroinesService,
+    private location: Location
 
 
-@Input() hero: Heroines;
-
-  constructor() { }
+  ) { }
 
   ngOnInit(): void {
+
+    this.getHeroines();
+
   }
+
+
+  getHeroines(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.heroinesService.getHero(id)
+      .subscribe(heroines => this.heroines = heroines);
+  }
+  
+
+  goBack(): void {
+    this.location.back();
+  }
+
+
 
 }

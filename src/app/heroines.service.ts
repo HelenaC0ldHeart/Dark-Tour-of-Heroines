@@ -12,13 +12,24 @@ import { Observable, of } from 'rxjs';
 })
 export class HeroinesService {
 
-getHeroines(): Observable<Heroines[]> {
-  //TODO: send the message_after_ fething the heroines
-  this.messageService.add('HeroinesService: fetched heroines');
-  return of(HEROINES);
-
-}
 
 
   constructor(private messageService: MessageService) { }
+
+
+  getHeroines(): Observable<Heroines[]> {
+    //TODO: send the message_after_ fething the heroines
+    this.messageService.add('HeroinesService: fetched heroines');
+    return of(HEROINES);
+  
+  }
+  
+  
+  getHero(id: number): Observable<Heroines> {
+    // TODO: send the message_after_ fetching the heroines
+    this.messageService.add(`HeroinesService: Fetched heroines id=${id}`);
+    return of (HEROINES.find(heroines => heroines.id == id));
+  }
+
+
 }

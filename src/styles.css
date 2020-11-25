@@ -58,18 +58,34 @@ h1 {
   }
 
 
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
 
   /* FOOTER */
 
   .devil-girl {
-    position: relative;
+    display: flex;
     height: 300px;
     width: auto;
   }
 
   .poison-love {
-    position: absolute;
+    position: flex;
     height: 300px;
     width: auto;
-    margin-left: 800px;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
   }

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeroinesComponent } from './heroines/heroines.component';
 import { HeroinesDetailComponent } from './heroines-detail/heroines-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroinesComponent,
     HeroinesDetailComponent,
-    MessagesComponent,  
+    MessagesComponent,
+    DashboardComponent,  
   ],
   imports: [
     BrowserModule,

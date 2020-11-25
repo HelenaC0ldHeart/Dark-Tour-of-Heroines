@@ -11,22 +11,23 @@ import { HeroinesService } from '../heroines.service';
 
 })
 export class HeroinesComponent implements OnInit {
-
+/* DEAD CODE
   heroines = HEROINES;
 
   selectedHero: Heroines;
   onSelect(heroines: Heroines): void {
     this.selectedHero = heroines;
   };
+*/
 
-
+/*DEAD CODE 2
   heroine = "Windstorm";
 
   hero: Heroines = {
     id: 1,
     name: 'Windstorm'
   };
-
+*/
   heroines: Heroines[];
   
   
